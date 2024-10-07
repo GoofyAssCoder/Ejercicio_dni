@@ -5,51 +5,32 @@
     -commit repositorio en github, git push
     -enviar enlace a repositorio   */
     
-    let dialog_ = prompt("Dame tu DNI, sin la letra:");
-    resto = dialog_%23;
-
-    switch (resto) {
-        case 0:
-            alert("La letra de tu DNI es una T");
-            break;
-        case 1:
-            alert("La letra de tu DNI es una R");
-            break;
-        case 2:
-            alert("La letra de tu DNI es una W");
-            break;
-        case 3:
-            alert("La letra de tu DNI es una A");
-            break;
-        case 4:
-            alert("La letra de tu DNI es una G");
-            break;
-        case 5:
-            alert("La letra de tu DNI es una M");
-            break;
-        case 6:
-            alert("La letra de tu DNI es una Y");
-            break
-        case 7:
-            alert("La letra de tu DNI es una F");
-            break;
-        case 8:
-            alert("La letra de tu DNI es una P");
-            break;
-        case 9:
-            alert("La letra de tu DNI es una D");
-            break;
-        case 10:
-            alert("La letra de tu DNI es una X");
-            break;
-        case 11:
-            alert("La letra de tu DNI es una B");
-            break;
-    
-        default:
-            alert("Ha ocurrido un error :(");
-            break;
+    function comprobarDNI() {
+        let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+        
+        let dniCompleto = prompt("Introduce tu DNI con la letra (ej. 12345678A):");
+        
+        // Separo número y letra:
+        let numeroDNI = dniCompleto.substring(0, dniCompleto.length - 1);
+        let letraDNI = dniCompleto.substring(dniCompleto.length - 1).toUpperCase();
+        
+        if (isNaN(numeroDNI) || numeroDNI.length != 8) {
+            alert("El número de DNI no es válido");
+            return;
+        }
+        
+        let resto = numeroDNI % 23;
+        let letraCorrecta = letras[resto];
+        
+        if (letraCorrecta === letraDNI) {
+            alert("El DNI es correcto.");
+        } else {
+            alert(`La letra del DNI es incorrecta. Debería ser: ${letraCorrecta}`);
+        }
     }
+    
+    comprobarDNI();
+    
 
 
 
