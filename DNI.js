@@ -51,9 +51,6 @@
             break;
     }
 
-    //console.log(user);
-    
-
 
 
 
