@@ -10,44 +10,44 @@
 
     switch (resto) {
         case 0:
-            console.log("T");
+            alert("La letra de tu DNI es una T");
             break;
         case 1:
-            console.log("R");
+            alert("La letra de tu DNI es una R");
             break;
         case 2:
-            console.log("W");
+            alert("La letra de tu DNI es una W");
             break;
         case 3:
-            console.log("A");
+            alert("La letra de tu DNI es una A");
             break;
         case 4:
-            console.log("G");
+            alert("La letra de tu DNI es una G");
             break;
         case 5:
-            console.log("M");
+            alert("La letra de tu DNI es una M");
             break;
         case 6:
-            console.log("Y");
+            alert("La letra de tu DNI es una Y");
             break
         case 7:
-            console.log("F");
+            alert("La letra de tu DNI es una F");
             break;
         case 8:
-            console.log("P");
+            alert("La letra de tu DNI es una P");
             break;
         case 9:
-            console.log("D");
+            alert("La letra de tu DNI es una D");
             break;
         case 10:
-            console.log("X");
+            alert("La letra de tu DNI es una X");
             break;
         case 11:
-            console.log("B");
+            alert("La letra de tu DNI es una B");
             break;
     
         default:
-            console.log("Ha ocurrido un error");
+            alert("Ha ocurrido un error :(");
             break;
     }
 
